@@ -11,6 +11,9 @@ node_modules
 # production
 /build
 
+# backgronud
+unsplash.jpg
+
 # misc
 .DS_Store
 .env.local

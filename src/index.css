@@ -7,6 +7,10 @@
 
 /* Prose Tweaks */
 
+.cursive {
+  font-family: "Lato", cursive;
+}
+
 .prose img {
   margin-left: auto;
   margin-right: auto;
