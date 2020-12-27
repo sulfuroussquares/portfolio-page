@@ -3,6 +3,8 @@ import {NavLink} from "react-router-dom";
 import {SocialIcon} from "react-social-icons";
 
 
+
+
 export default function NavBar() {
 
     return (
@@ -10,11 +12,21 @@ export default function NavBar() {
         <header className="bg-black">
             <div className="container flex mx-auto justify-between" >
                 <nav className="flex">
-                    <NavLink to="/"
+                    {/* Old Home Link */}
+                    {/* <NavLink to="/"
                     exact
                     activeClassName="text-green-50"
                     className="inflex-flex items-center py-6 px-3 mr-4 text-green-50 hover:text-green-800 text-4xl font-bold cursive tracking-widest"> 
                         Home
+                    </NavLink> */}
+
+                    <NavLink to="/"
+                    exact
+                    activeClassName="text-green-50"
+                    className="inflex-flex items-center px-3 mr-4 "> 
+                    <div className="container inline-flex items-center px-3 ">
+                    <img src="https://bbetanco-portfolio-bucket.s3.amazonaws.com/BB-portfolio-logo.png" className="" style={{height:100, width:100}}/>
+                    </div>
                     </NavLink>
 
                     <NavLink to="/about"

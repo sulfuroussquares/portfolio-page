@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import image from "../unsplash.jpg"
 
 import sanityClient from "../client.js";
 
@@ -23,8 +22,8 @@ export default function Project() {
 
 
     return (
-        <main className=""> 
-        <img src={image} alt="Rocky Mountains" className="absolute object-cover w-full h-full" />
+        <main className="min-h-screen "> 
+        <img src="https://bbetanco-portfolio-bucket.s3.amazonaws.com/unsplash.jpg" alt="Rocky Mountains" className="bg-repeat absolute object-cover w-full h-full" />
             <section className="container mx-auto">
                 {/* Page Title */}
                 <h1 className="text-5xl flex justify-center cursive"> My Projects </h1>
@@ -32,7 +31,7 @@ export default function Project() {
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12"> Welcome to my projects page.</h2>
                 <section className="grid grid-cols-2 gap-8">
                     {projectData && projectData.map((project, index) => (
-                    <article className="bg-gray-900 bg-opacity-50 relative rounded-lg shadow-xl p-16">
+                    <article className="bg-gray-900 bg-opacity-50 relative rounded-lg shadow-xl p-2">
                         {/* Project Title with clickable link to parameteres from Sanity studio */}
                         <h3 className="text-gray-50 text-3xl font-bold mb-2 hover:text-red-700">
                             <a href={project.link} alt={project.title} target="_blank" rel="noopener noreferrer"> {project.title}</a>
@@ -43,7 +42,7 @@ export default function Project() {
                                 <strong className="font-bold">Finished on</strong> : {" "} {new Date(project.date).toLocaleDateString()}
                             </span>
                             <span>
-                                <strong className="font-bold">Company </strong> : {" "} {project.place}
+                                {/* <strong className="font-bold">Company </strong> : {" "} {project.place} */}
                             </span>
                             <span>
                                 <strong className="font-bold">Type </strong>: {" "} {project.type}
@@ -51,8 +50,8 @@ export default function Project() {
                             </span>
                             <p className="my-6 text-lg text-gray-50 leading-relaxed">{project.description}</p>
                             <a href={project.link} rel="noopener noreferrer" target="_blank"
-                            className="text-gray-50 justify-center font-bold hover:underline hover:text-red-400 text-xl"> View the Project {" "}
-                            <span role="img" aria-label="right-pointer"> 👉 </span></a>
+                            className="text-gray-50 justify-center font-bold hover:underline hover:text-red-400 text-xl"> View the Project
+                            </a>
                         </div>
                     </article>
                     ))}

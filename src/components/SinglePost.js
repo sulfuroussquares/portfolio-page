@@ -54,7 +54,7 @@ export default function SinglePost() {
 
     return (
         <main className="bg-gray-200 min-h-screen p-12">
-            <article className="container mx-auto shadow-lg bg-green-100 rounded-lg">
+            <article className="container mx-auto shadow-lg bg-gray-50 rounded-lg">
                 <header className="relative ">
                     <div className="absolute h-full w-full flex items-center justify-center p-8">
                         <div className="bg-white bg-opacity-75 rounded p-12">
@@ -73,14 +73,15 @@ export default function SinglePost() {
                     </div>
                     {/* Main Image */}
                     <img 
-                    // src={singlePost.mainImage.asset.url}
                     src={urlFor(singlePost.mainImage).url()}
                     alt={singlePost.title}
                     className="w-full object-cover rounded-t"
                     style={{height: "400 px"}}/>
                 </header>
-                <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full"></div>
+                <div className="px-16 lg:px-48 py-3 lg:py-6 prose lg:prose-xl max-w-full"></div>
+                
                 <BlockContent blocks={singlePost.body} projectId="fzks5u4e" dataset="production"/>
+                
             </article>
         </main>
     );
