@@ -26,15 +26,15 @@ export default {
             options: {
                 list: [
                     {
-                    value: "personal",
+                    value: "Personal",
                     title: "Personal"
                     },
                     {
-                        value: "tutorial",
+                        value: "Tutorial",
                         title: "Tutorial"
                     },
                     {
-                        value: "school",
+                        value: "School",
                         title: "School"
                     }
                 ]

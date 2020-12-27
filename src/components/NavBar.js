@@ -3,6 +3,8 @@ import {NavLink} from "react-router-dom";
 import {SocialIcon} from "react-social-icons";
 
 
+
+
 export default function NavBar() {
 
     return (
@@ -10,35 +12,47 @@ export default function NavBar() {
         <header className="bg-black">
             <div className="container flex mx-auto justify-between" >
                 <nav className="flex">
+                    {/* Old Home Link */}
+                    {/* <NavLink to="/"
+                    exact
+                    activeClassName="text-green-50"
+                    className="inflex-flex items-center py-6 px-3 mr-4 text-green-50 hover:text-green-800 text-4xl font-bold cursive tracking-widest"> 
+                        Home
+                    </NavLink> */}
+
                     <NavLink to="/"
                     exact
-                    activeClassName="text-white"
-                    className="inflex-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest"> 
-                        Home
+                    activeClassName="text-green-50"
+                    className="inflex-flex items-center px-3 mr-4 "> 
+                    <div className="container inline-flex items-center px-3 ">
+                    <img src="https://bbetanco-portfolio-bucket.s3.amazonaws.com/BB-portfolio-logo.png" className="" style={{height:100, width:100}}/>
+                    </div>
                     </NavLink>
 
                     <NavLink to="/about"
-                    activeClassName="text-red-100 bg-red-700"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"> 
+                    activeClassName="text-green-50 bg-gray-500 bg-opacity-20"
+                    className="inline-flex items-center py-3 px-3 my-6 rounded text-green-50 hover:text-green-800"> 
                         About Me
                     </NavLink>
 
                     <NavLink to="/post"
-                    activeClassName="text-red-100 bg-red-700"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"> 
+                    activeClassName="text-green-50 bg-gray-500 bg-opacity-20"
+                    className="inline-flex items-center py-3 px-3 my-6 rounded text-green-50 hover:text-green-800"> 
                         Posts
                     </NavLink>
 
                     <NavLink to="/project"
-                    activeClassName="text-red-100 bg-red-700"
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"> 
+                    activeClassName="text-green-50 bg-gray-500 bg-opacity-20"
+                    className="inline-flex items-center py-3 px-3 my-6 rounded text-green-50 hover:text-green-800"> 
                         Projects
                     </NavLink>
                 </nav>
                 <div className="inline-flex py-3 px-3 my-6" >
                     {/* Using React Social Icons */}
-                    <SocialIcon url = "https://www.linkedin.com/in/bibetancourt/" className="mr-4" target="_blank" fgcolor="#ffffff" style={{ height: 35, width: 35}}/>
-                    <SocialIcon url = "https://github.com/sulfuroussquares" className="mr-4" target="_blank" fgcolor="#fff" style={{ height: 35, width: 35}}/>
+                    <SocialIcon url = "https://www.linkedin.com/in/bibetancourt/" className="mr-4" target="_blank" fgColor="#C8E6B0" style={{ height: 35, width: 35}}/>
+                    <SocialIcon url = "https://github.com/sulfuroussquares" className="mr-4" target="_blank" fgColor="#C8E6B0" style={{ height: 35, width: 35}}/>
+                    <SocialIcon url = "https://medium.com/@jasonsummercamp" className="mr-4" target="_blank" fgColor="#C8E6B0" style={{ height: 35, width: 35}}/>
+                    
                 </div>
             </div>
         </header>
